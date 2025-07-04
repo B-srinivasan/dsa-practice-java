@@ -1,0 +1,20 @@
+🔸 What is an Array?
+An array is a collection of elements stored in contiguous memory locations, all of the same data type.
+
+int[] arr = new int[5];  // Declaration
+int[] nums = {1, 2, 3, 4};  // Initialization
+
+🔸 Why Use Arrays?
+To store multiple values in a single variable.
+Easy to access using index.
+Useful for applying searching and sorting algorithms.
+
+🔸 Types of Arrays:
+
+One-Dimensional Array:
+int[] arr = new int[3]; // index: 0 to 2
+arr[0] = 10;
+
+Two-Dimensional Array (Matrix):
+int[][] mat = new int[2][2];
+mat[0][1] = 5;
