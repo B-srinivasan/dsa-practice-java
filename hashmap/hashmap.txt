@@ -1,0 +1,109 @@
+===============================
+📘 Java HashMap - DSA Reference
+===============================
+
+🔹 What is a HashMap?
+-----------------------
+A HashMap in Java is a part of the java.util package.
+It is a data structure that stores data in **key-value pairs**.
+Each key is unique, and each key maps to exactly one value.
+
+👉 Think of it like a real-life dictionary:
+   Key → Word, Value → Meaning
+
+Syntax:
+-------
+HashMap<KeyType, ValueType> map = new HashMap<>();
+
+Example:
+--------
+HashMap<Integer, String> map = new HashMap<>();
+map.put(1, "Apple");
+map.put(2, "Banana");
+
+System.out.println(map.get(1)); // Output: Apple
+
+-----------------------
+🛠️ Common HashMap Methods
+-----------------------
+
+| Method                      | Description                                    |
+|----------------------------|------------------------------------------------|
+| map.put(key, value)        | Add or update a key with a value              |
+| map.get(key)               | Get the value for a key                       |
+| map.getOrDefault(k, d)     | Get value if key exists, else return default  |
+| map.containsKey(key)       | Check if key exists                           |
+| map.containsValue(value)   | Check if value exists                         |
+| map.remove(key)            | Remove a key-value pair                       |
+| map.keySet()               | Returns a Set of all keys                    |
+| map.values()               | Returns a Collection of all values           |
+| map.entrySet()             | Returns a Set of key-value entries           |
+| map.size()                 | Returns number of key-value pairs            |
+| map.clear()                | Removes all entries                          |
+| map.isEmpty()              | Checks if map is empty                       |
+
+-----------------------
+🔄 Example: Frequency Counter
+-----------------------
+
+Problem:
+--------
+Given an array of integers, count the frequency of each element.
+
+Code:
+-----
+import java.util.HashMap;
+
+public class FrequencyCounter {
+    public static void main(String[] args) {
+        int[] arr = {2, 2, 3, 4, 2, 3};
+
+        HashMap<Integer, Integer> freqMap = new HashMap<>();
+
+        for (int num : arr) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+        }
+
+        for (int key : freqMap.keySet()) {
+            System.out.println(key + " → " + freqMap.get(key) + " times");
+        }
+    }
+}
+
+Output:
+-------
+2 → 3 times
+3 → 2 times
+4 → 1 time
+
+-----------------------
+🧠 Common DSA Problems Using HashMap
+-----------------------
+
+1. Frequency of elements in array/string
+2. First non-repeating character in a string
+3. Two Sum problem
+4. Group Anagrams
+5. Check if two strings are anagrams
+6. Longest Subarray with given sum
+7. Subarray with 0 sum
+8. Find all duplicate elements
+9. Count distinct elements in every window of size K
+10. Find majority element (Boyer-Moore can be used too)
+
+-----------------------
+📝 Notes:
+-----------------------
+- HashMap does NOT maintain order of insertion. Use LinkedHashMap if you need order.
+- It allows 1 null key and multiple null values.
+- Time complexity of get(), put(), containsKey() is O(1) on average.
+
+-----------------------
+🧪 Practice Tip:
+-----------------------
+Always try to dry-run your HashMap logic with a small input to understand how keys and values are stored and updated.
+
+=======================
+✅ Created by: Srini Vasan
+🗂️ Repo: dsa-practice-java/hashmap/
+=======================
