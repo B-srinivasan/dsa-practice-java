@@ -1,5 +1,6 @@
 //Day 8: Quick Sort
 public class QuickSort {
+    
     // Partition function
     public static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];  // Choosing last element as pivot
